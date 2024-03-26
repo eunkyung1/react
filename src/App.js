@@ -6,6 +6,7 @@ function Header(props){
   return <header>
   <h1><a href="/">{props.title}</a></h1>
   </header>
+
 }
 function Nav(props){
   const lis = []
@@ -13,13 +14,13 @@ function Nav(props){
     let t = props.topics[i];
     lis.push(<li key={t.id}><a href={'/read'+t.id}>{t.title}</a></li>)
   }
-  
   return <nav>
     <ol>
      {lis}
     </ol>
   </nav>
 }
+
 function Article(props){
   return <article>
     <h2>{props.title}</h2>
